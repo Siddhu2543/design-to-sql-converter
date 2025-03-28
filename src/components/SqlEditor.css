@@ -1,0 +1,93 @@
+
+.sql-editor {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.sql-editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sql-editor-toolbar h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.sql-editor-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.sql-editor-content {
+  position: relative;
+}
+
+.sql-code {
+  padding: 1rem;
+  background-color: #f8f9fc;
+  overflow-x: auto;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #1e293b;
+  margin: 0;
+}
+
+.sql-editor-textarea {
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: #f8f9fc;
+  min-height: 200px;
+  border: none;
+  resize: vertical;
+}
+
+.sql-validation-result {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.sql-validation-result.valid {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.sql-validation-result.invalid {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+.sql-validation-result p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sql-editor-actions {
+    flex-wrap: wrap;
+  }
+  
+  .sql-editor-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .sql-editor-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

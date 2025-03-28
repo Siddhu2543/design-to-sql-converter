@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Message } from './ChatInterface';
+import SqlEditor from './SqlEditor';
 import './MessageList.css';
 
 interface MessageListProps {
@@ -41,18 +42,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages }) => {
             <p>{message.content}</p>
             
             {message.sql && (
-              <div className="sql-output">
-                <div className="sql-header">
-                  <h3>Generated SQL</h3>
-                  <button 
-                    className="copy-button"
-                    onClick={() => navigator.clipboard.writeText(message.sql)}
-                  >
-                    Copy
-                  </button>
-                </div>
-                <pre className="sql-code">{message.sql}</pre>
-              </div>
+              <SqlEditor initialSql={message.sql} />
             )}
           </div>
         </div>
