@@ -1,0 +1,37 @@
+
+.file-upload {
+  position: relative;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.upload-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.upload-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
